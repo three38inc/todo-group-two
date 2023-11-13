@@ -24,3 +24,31 @@ main{
     border-top-left-radius: 20px;
     height: 8rem;
 }
+.section-1{
+    background-color:rgb(255, 254, 254);
+    width: fit-content;
+    padding: 2rem 9rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    position: relative;
+    top: -15%;
+    left: 8%;
+}
+.section-1 input{
+    background-color:rgb(245, 240, 255);
+    border: none;
+    border-bottom: 2px solid grey;
+    background-color: transparent;
+    font-size: large;
+    outline: none;
+}
+.section-1 button{
+    background-color: rgb(230, 39, 39);
+    box-shadow: rgba(255, 0, 0, 0.315) 0px 3px 8px;
+    border: none;
+    color: white;
+    width: 150px;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: 15px;
+}
