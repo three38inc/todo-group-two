@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@300&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(245, 240, 255);
+}
+main{
+    margin:4% auto;
+    text-align: center;
+    width: 600px;
+    height: 30rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.purple{
+    background-color:rgb(107, 59, 170) ;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 8rem;
+}
+.section-1{
+    background-color:rgb(255, 254, 254);
+    width: fit-content;
+    padding: 2rem 9rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
+    position: relative;
+    top: -15%;
+    left: 8%;
+}
+.section-1 input{
+    background-color:rgb(245, 240, 255);
+    border: none;
+    border-bottom: 2px solid grey;
+    background-color: transparent;
+    font-size: large;
+    outline: none;
+}
+.section-1 button{
+    background-color: rgb(230, 39, 39);
+    box-shadow: rgba(255, 0, 0, 0.315) 0px 3px 8px;
+    border: none;
+    color: white;
+    width: 150px;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-top: 15px;
+}
