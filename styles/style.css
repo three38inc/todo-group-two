@@ -19,7 +19,7 @@ main{
     font-family: "Poppins", sans-serif;
 }
 .purple{
-    background-color:rgb(107, 59, 170) ;
+    background: linear-gradient(to right, rgb(95, 45, 116), rgb(70, 70, 145)) ;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     height: 8rem;
