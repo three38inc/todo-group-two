@@ -39,8 +39,11 @@ main{
     border: none;
     border-bottom: 2px solid grey;
     background-color: transparent;
-    font-size: large;
-    outline: none;
+    font-size: 16px;
+    outline: none;  
+}
+.section-1 input:focus{
+    border-bottom: 2px solid rgb(167, 167, 167);
 }
 .section-1 button{
     background-color: rgb(230, 39, 39);
@@ -51,6 +54,15 @@ main{
     padding: .5rem;
     border-radius: 5px;
     margin-top: 15px;
+    cursor: pointer;
+}
+.section-1 button:hover{
+    background-color: rgb(207, 38, 38);
+    box-shadow: rgba(255, 0, 0, 0.185) 0px 3px 8px;
+}
+.section-1 button:active{
+    box-shadow: none;
+    transform: scale(0.95);
 }
 
 .section-2{
