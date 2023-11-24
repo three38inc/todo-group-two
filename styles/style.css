@@ -109,9 +109,14 @@ main{
     }
 
 .section-2 .row_heading .column_status,
-    .section-2 .row_heading .column_close {
+.section-2 .row_heading .column_close {
         flex: 1;
         text-align: center;
+    }
+
+    .section-2 {
+        overflow-y: auto;
+        overflow-x:hidden;
     }
 
 .section-2 .container .row {
@@ -133,7 +138,7 @@ main{
 }
 
 .section-2 .container .row .column2,
-    .section-2 .container .row .column3{
+.section-2 .container .row .column3{
     flex: 1;
     text-align: center;
     padding: 15px 0;
