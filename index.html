@@ -15,8 +15,8 @@
         </div>
             <!-- section-1: first block of the to-do list start -->
                 <section class="section-1">
-                    <input type="text" placeholder="What would you like to do?"><br>
-                    <button>Add</button>
+                    <input id="input" type="text" placeholder="What would you like to do?"><br>
+                    <button id="addBtn">Add</button>
                 </section>
                 <!-- section-1 end -->
 
@@ -25,30 +25,23 @@
 
                     <h1>Todo List</h1>
                     
-                    <div class="container">
+                    <div id="tasks-container" class="container">
                         <div class="row_heading">
                             <div class="column_list">List</div>
                             <div class="column_status">Status</div>
                             <div class="column_close">Close</div>
                         </div>
-                    
-                        <!-- Add more rows as needed -->
-                        <div class="row">
-                            <div class="column1">Go to gym</div>
-                            <div class="column2"><button class="status_button">Completed</button></div>
-                            <div class="column3"><i class="fa-solid fa-trash-can"></i></div>
+                    <!-- Add more tasks start -->
+                        <div id="all_tasks">
+                             
                         </div>
-                        <div class="row">
-                            <div class="column1">Check</div>
-                            <div class="column2"><button class="status_button">Pending</button></div>
-                            <div class="column3"><i class="fa-solid fa-trash-can"></i></div>
-                        </div>
-                    </div>
+                    <!-- Add more tasks end -->
+                        
 
                 </section>
                 <!-- section-2 end -->
     </main>
-
+<script src="main.js"></script>
 </body>
   
 </html>
