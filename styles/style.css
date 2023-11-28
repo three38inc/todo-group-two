@@ -55,6 +55,7 @@ main{
     border-radius: 5px;
     margin-top: 15px;
     cursor: pointer;
+    outline: none;
 }
 .section-1 button:hover{
     background-color: rgb(207, 38, 38);
@@ -135,6 +136,9 @@ main{
     text-align: left;
     margin-left: 42px;
     padding: 18px 0;
+    text-transform:capitalize;
+    font-weight:bold;
+
 }
 
 .section-2 .container .row .column2,
@@ -187,3 +191,17 @@ main{
    100% { transform:  rotate(0deg); }
 }
 /* css effects end */
+
+
+
+/* toggle function styles for button start */
+.section-2 .container .row .column2 .status_button.completed{
+    background-color: #5F9EA0;
+    color:white;
+}
+
+.section-2 .container .row .column2 .status_button.Pending{
+     background-color: rgb(187, 121, 0);
+    color: white;
+}
+/* toggle function styles for button end */
