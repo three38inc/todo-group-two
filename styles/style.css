@@ -200,7 +200,7 @@ main{
     color:white;
 }
 
-.section-2 .container .row .column2 .status_button.Pending{
+.section-2 .container .row .column2 .status_button.pending{
      background-color: rgb(187, 121, 0);
     color: white;
 }
