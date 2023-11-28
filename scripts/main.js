@@ -14,7 +14,7 @@ addBtn.addEventListener('click',()=>{
     tasks.push({
         id: tasks.length+1,
         task: inputValue,
-        status: 'Pending'
+        status: 'pending'
     });
     input.value='';
     displayAllTasks();
@@ -64,8 +64,8 @@ function toggle(event){
             event.target.classList.remove('completed');
             event.target.classList.add('Pending');
             event.target.innerHTML="Pending";
-        } else if(event.target.classList.contains('Pending')){
-            event.target.classList.remove('Pending');
+        } else if(event.target.classList.contains('pending')){
+            event.target.classList.remove('pending');
             event.target.classList.add('completed');
             event.target.innerHTML="Completed";
         }
