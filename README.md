@@ -7,6 +7,8 @@ A Todo List Web App by Group Two of DS Interns. Using HTML, CSS and JavaScript. 
 
 #### Team member-1: Melza
 * HTML and CSS design of the todo list background container and input block with button.
+* Functionality: Add, Render display, Sort
 #### Team member-2: Ramya
 * HTML and CSS design of the todo list second block which displays the list's.
+* Functionality: Delete
 
