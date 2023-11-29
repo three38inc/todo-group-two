@@ -153,6 +153,8 @@ main{
     width: fit-content;
     color: white;
     background-color:rgb(187, 121, 0);
+    box-shadow:  rgb(187, 121, 0) 0px 1px 8px;
+
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -161,6 +163,9 @@ main{
 /* css effects start */
 .section-2 .container .row .column2 .status_button:hover{
     background-color: rgba(187, 121, 0, 0.884);
+}
+.section-2 .container .row .column2 .status_button:active{
+    box-shadow: none;
 }
 .column2 button:active{
     transform: scaleX(0.95);
@@ -198,5 +203,14 @@ main{
 .section-2 .container .row .column2 .status_button.Completed{
     background-color: #5F9EA0;
     color:white;
+    box-shadow:  #5F9EA0 0px 1px 8px;
+    
     }
+
+.section-2 .container .row .column2 .status_button.Completed:hover{
+    background-color: #5f9ea0ea;
+}
+.section-2 .container .row .column2 .status_button.Completed:active{
+    box-shadow: none;
+}
 /* toggle function styles for button end */
