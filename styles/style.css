@@ -26,7 +26,7 @@ main{
 }
 .section-1{
     background-color:rgb(255, 254, 254);
-    width: fit-content;
+    width:85%;
     padding: 2rem 9rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
@@ -68,7 +68,7 @@ main{
 
 .section-2{
     background-color: rgb(255, 254, 254);
-    width: 510px;
+    width:85%;
     height:200px;
     padding: 7rem 12.6rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -115,19 +115,19 @@ main{
         text-align: center;
     }
 
-    .section-2 {
-        overflow-y: auto;
-        overflow-x:hidden;
-    }
-
+.section-2 .all_task{
+    margin-left: -201px;
+    width:510px;
+    height:115px;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
 .section-2 .container .row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     color:black;
-    margin-left: -201px;
     border-bottom: 2px solid #F5F5F5;    
-    width:510px;
     font-size: 12px;
 }
 
@@ -141,14 +141,14 @@ main{
 
 }
 
-.section-2 .container .row .column2,
-.section-2 .container .row .column3{
+.section-2 .container .row .column_status,
+.section-2 .container .row .column_close{
     flex: 1;
     text-align: center;
     padding: 15px 0;
 }
 
-.section-2 .container .row .column2 .status_button{
+.section-2 .container .row .column_status .status_button{
     padding:5px 8px;
     width: fit-content;
     color: white;
@@ -159,26 +159,26 @@ main{
 }
 
 /* css effects start */
-.section-2 .container .row .column2 .status_button:hover{
+.section-2 .container .row .column_status .status_button:hover{
     background-color: rgba(187, 121, 0, 0.884);
     color: white;
 }
-.column2 button:active{
+.column_status button:active{
     transform: scaleX(0.95);
 }
-.column3 i{
+.column_close i{
    color: red;
    font-size: 20px;
    cursor: pointer;
 }
 
-.column3 i:hover{
+.column_close i:hover{
    color: rgb(221, 9, 9);
    animation-name: shake;
    animation-duration: 1s;
    animation-iteration-count: infinite;
 }
-.column3 i:active{
+.column_close i:active{
    transform: scaleY(1.1);
    animation: none;
     color: red;
@@ -196,8 +196,8 @@ main{
 
 
 /* toggle function styles for button start */
-.section-2 .container .row .column2 .status_button.Completed{
+.section-2 .container .row .column_status .status_button.Completed{
     background-color: #5F9EA0;
     color:white;
-}
+
 /* toggle function styles for button end */

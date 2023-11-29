@@ -14,7 +14,7 @@ addBtn.addEventListener('click',()=>{
     tasks.push({
         id: tasks.length+1,
         task: inputValue,
-        status: 'Pending'
+        status: 'pending'
     });
     input.value='';
     sortTasks();
@@ -39,9 +39,10 @@ function toggle(event){
     const task = tasks.find((element) => element.id == taskId);
     if(task){
         if(task.status === 'Completed'){
-            task.status = "Pending";
+            task.status = 'Pending';
         }else{
-            task.status = "Completed";
+            task.status = 'Completed';
+
         }
     }else{
         console.log("Task not found for ID",taskId);
@@ -74,6 +75,17 @@ function sortTasks(){
     //Adding event listeners for each status button (end)
 }
 // Sort Function (end)
+
+//function to delete the rows from the todo-list
+function delete_row(id){
+    tasks = tasks.filter(object => {
+        return object.id != id;
+    });
+    const rowToRemove = document.getElementById(id);
+    if (rowToRemove) {
+        rowToRemove.parentElement.removeChild(rowToRemove);
+    }
+}
 
 //initial data load
 sortTasks();
