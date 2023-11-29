@@ -27,7 +27,7 @@ function taskHtml(data){
                 <div id="${data.id}" class="row">
                     <div class="column1">${data.task}</div>
                     <div class="column2"><button class="status_button ${data.status}">${data.status}</button></div>
-                    <div class="column3"><i class="fa-solid fa-trash-can"></i></div>
+                    <div class="column3"><i class="fa-solid fa-trash-can" onclick=delete_row('${data.id}')></i></div>
                 </div>
             `   
 }
@@ -78,7 +78,9 @@ function sortTasks(){
 
 //function to delete the rows from the todo-list
 function delete_row(id){
+    console.log('delete',id)
     tasks = tasks.filter(object => {
+        console.log('tasks',tasks)
         return object.id != id;
     });
     const rowToRemove = document.getElementById(id);
@@ -89,6 +91,3 @@ function delete_row(id){
 
 //initial data load
 sortTasks();
-
-
-
