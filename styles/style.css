@@ -26,7 +26,7 @@ main{
 }
 .section-1{
     background-color:rgb(255, 254, 254);
-    width: fit-content;
+    width:85%;
     padding: 2rem 9rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
@@ -68,7 +68,7 @@ main{
 
 .section-2{
     background-color: rgb(255, 254, 254);
-    width: 510px;
+    width:85%;
     height:200px;
     padding: 7rem 12.6rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -115,19 +115,19 @@ main{
         text-align: center;
     }
 
-    .section-2 {
-        overflow-y: auto;
-        overflow-x:hidden;
-    }
-
+.section-2 .all_task{
+    margin-left: -201px;
+    width:510px;
+    height:115px;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
 .section-2 .container .row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     color:black;
-    margin-left: -201px;
     border-bottom: 2px solid #F5F5F5;    
-    width:510px;
     font-size: 12px;
 }
 
