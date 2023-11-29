@@ -32,7 +32,7 @@ function displayAllTasks(){
             <div id="${element.id}" class="row">
                 <div class="column1">${element.task}</div>
                 <div class="column2"><button class="status_button ${element.status}">${element.status}</button></div>
-                <div class="column3"><i class="fa-solid fa-trash-can"></i></div>
+                <div class="column3"><i class="fa-solid fa-trash-can" onclick=delete_row('${element.id}')></i></div>
             </div>
         `
     });
@@ -47,7 +47,6 @@ taskListContainer.innerHTML = htmlString;
 taskListContainer.addEventListener('click', function (event) {
 if (event.target.classList.contains('status_button')) {
     const taskId = event.target.parentNode.parentNode.id;
-console.log(taskId);
 const task = tasks.find( element => element.id == taskId )
 if(task){
     toggle(event);
@@ -71,6 +70,17 @@ function toggle(event){
         }
     }
 //Toggle function to toggle between completed and pending (end)
+
+//function to delete the rows from the todo=list
+function delete_row(id){
+    tasks = tasks.filter(object => {
+        return object.id != id;
+    });
+    const rowToRemove = document.getElementById(id);
+    if (rowToRemove) {
+        rowToRemove.parentElement.removeChild(rowToRemove);
+    }
+}
 
 
 
