@@ -109,8 +109,8 @@ main{
         margin-left: 39px
     }
 
-.section-2 .row_heading .column2,
-.section-2 .row_heading .column3 {
+.section-2 .row_heading .column_status,
+.section-2 .row_heading .column_close {
         flex: 1;
         text-align: center;
     }
@@ -161,7 +161,6 @@ main{
 /* css effects start */
 .section-2 .container .row .column2 .status_button:hover{
     background-color: rgba(187, 121, 0, 0.884);
-    color: white;
 }
 .column2 button:active{
     transform: scaleX(0.95);
