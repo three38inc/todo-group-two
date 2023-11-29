@@ -109,8 +109,8 @@ main{
         margin-left: 39px
     }
 
-.section-2 .row_heading .column_status,
-.section-2 .row_heading .column_close {
+.section-2 .row_heading .column2,
+.section-2 .row_heading .column3 {
         flex: 1;
         text-align: center;
     }
@@ -141,14 +141,14 @@ main{
 
 }
 
-.section-2 .container .row .column_status,
-.section-2 .container .row .column_close{
+.section-2 .container .row .column2,
+.section-2 .container .row .column3{
     flex: 1;
     text-align: center;
     padding: 15px 0;
 }
 
-.section-2 .container .row .column_status .status_button{
+.section-2 .container .row .column2 .status_button{
     padding:5px 8px;
     width: fit-content;
     color: white;
@@ -159,26 +159,26 @@ main{
 }
 
 /* css effects start */
-.section-2 .container .row .column_status .status_button:hover{
+.section-2 .container .row .column2 .status_button:hover{
     background-color: rgba(187, 121, 0, 0.884);
     color: white;
 }
-.column_status button:active{
+.column2 button:active{
     transform: scaleX(0.95);
 }
-.column_close i{
+.column3 i{
    color: red;
    font-size: 20px;
    cursor: pointer;
 }
 
-.column_close i:hover{
+.column3 i:hover{
    color: rgb(221, 9, 9);
    animation-name: shake;
    animation-duration: 1s;
    animation-iteration-count: infinite;
 }
-.column_close i:active{
+.column3 i:active{
    transform: scaleY(1.1);
    animation: none;
     color: red;
@@ -196,7 +196,7 @@ main{
 
 
 /* toggle function styles for button start */
-.section-2 .container .row .column_status .status_button.Completed{
+.section-2 .container .row .column2 .status_button.Completed{
     background-color: #5F9EA0;
     color:white;
     }
