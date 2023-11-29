@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:wght@300&family=Roboto:ital,wght@1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
@@ -96,7 +97,7 @@ main{
     flex-direction: row;
     justify-content: space-around;
     width: 510px;
-    margin-left: -201px;
+    margin-left: -202px;
     margin-top: 12px;
     padding: 6px;
     font-size: 14px;
