@@ -152,7 +152,7 @@ main{
     padding:5px 8px;
     width: fit-content;
     color: white;
-    background-color: #5F9EA0;
+    background-color:rgb(187, 121, 0);
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -160,7 +160,8 @@ main{
 
 /* css effects start */
 .section-2 .container .row .column2 .status_button:hover{
-    background-color: rgb(77, 132, 134);
+    background-color: rgba(187, 121, 0, 0.884);
+    color: white;
 }
 .column2 button:active{
     transform: scaleX(0.95);
@@ -195,13 +196,8 @@ main{
 
 
 /* toggle function styles for button start */
-.section-2 .container .row .column2 .status_button.completed{
+.section-2 .container .row .column2 .status_button.Completed{
     background-color: #5F9EA0;
     color:white;
-}
-
-.section-2 .container .row .column2 .status_button.Pending{
-     background-color: rgb(187, 121, 0);
-    color: white;
 }
 /* toggle function styles for button end */
