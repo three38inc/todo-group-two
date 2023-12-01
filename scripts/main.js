@@ -78,13 +78,11 @@ function sortTasks(){
 
 //function to delete the rows from the todo-list
 function delete_row(id){
-    console.log('delete',id)
     tasks = tasks.filter(object => {
-        console.log('tasks',tasks)
         return object.id != id;
     });
     const rowToRemove = document.getElementById(id);
-    if (rowToRemove) {
+    if (rowToRemove && confirm("Are you sure ?")) {
         rowToRemove.parentElement.removeChild(rowToRemove);
     }
 }
