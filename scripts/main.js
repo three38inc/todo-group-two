@@ -14,7 +14,7 @@ addBtn.addEventListener('click',()=>{
     tasks.push({
         id: tasks.length+1,
         task: inputValue,
-        status: 'pending'
+        status: 'Pending'
     });
     input.value='';
     sortTasks();
