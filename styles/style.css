@@ -13,7 +13,7 @@ main{
     margin:4% auto;
     text-align: center;
     width: 600px;
-    height: 30rem;
+    max-height: 1200px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 20px;
     color: white;
@@ -32,7 +32,7 @@ main{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     position: relative;
-    top: -15%;
+    top: -75px;
     left: 8%;
 }
 .section-1 input{
@@ -47,8 +47,8 @@ main{
     border-bottom: 2px solid rgb(167, 167, 167);
 }
 .section-1 button{
-    background-color: rgb(230, 39, 39);
-    box-shadow: rgba(255, 0, 0, 0.315) 0px 3px 8px;
+    background-color: rgb(95, 95, 156) ;
+    box-shadow:  rgb(114, 114, 168) 0px 3px 8px;
     border: none;
     color: white;
     width: 150px;
@@ -59,8 +59,8 @@ main{
     outline: none;
 }
 .section-1 button:hover{
-    background-color: rgb(207, 38, 38);
-    box-shadow: rgba(255, 0, 0, 0.185) 0px 3px 8px;
+    background-color: rgb(81, 81, 153);
+    box-shadow: rgb(114, 114, 168) 0px 3px 8px;
 }
 .section-1 button:active{
     box-shadow: none;
@@ -70,13 +70,15 @@ main{
 .section-2{
     background-color: rgb(255, 254, 254);
     width:85%;
-    height:200px;
+    max-height:900px;
     padding: 7rem 12.6rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 10px;
     position: relative;
     top: -43px;
     left: 46px;
+
+    padding-bottom:0 ;
 }
 
 .section-2 h1{
@@ -119,7 +121,7 @@ main{
 .section-2 .all_task{
     margin-left: -201px;
     width:510px;
-    height:115px;
+    max-height:200px;
     overflow-y: auto;
     overflow-x:hidden;
 }
@@ -172,13 +174,13 @@ main{
     transform: scaleX(0.95);
 }
 .column3 i{
-   color: red;
+   color: rgb(240, 57, 57);
    font-size: 20px;
    cursor: pointer;
 }
 
 .column3 i:hover{
-   color: rgb(221, 9, 9);
+   color: rgb(233, 3, 3);
    animation-name: shake;
    animation-duration: 1s;
    animation-iteration-count: infinite;
