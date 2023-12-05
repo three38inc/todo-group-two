@@ -1,11 +1,20 @@
-//array to store the tasks
-let tasks = [];
+//continious data storage to localstorage
+//to check if localstorage is already set with key tasks
+let tasks=localStorage.getItem('tasks')
+
+if(!tasks){
+    tasks=[]
+    localStorage.setItem('tasks',JSON.stringify(tasks))
+} else {
+    tasks=JSON.parse(tasks)
+}
 
 const input = document.getElementById('input');
 const addBtn = document.getElementById('addBtn');
 
 //Add function: To add value from the input field (start) 
 addBtn.addEventListener('click',()=>{
+    console.log('tasks',tasks)
     let inputValue = input.value;
     if(!inputValue){
         alert("No Task entered to add!");
@@ -16,18 +25,22 @@ addBtn.addEventListener('click',()=>{
         task: inputValue,
         status: 'Pending'
     });
+
+    saveTaskToLocalStorage()
     input.value='';
     sortTasks();
 })
 //Add value from the input field (end)
 
 //Display function: To display the rendered task in the Todo list (start)
-function taskHtml(data){    
+function taskHtml(data){ 
+    console.log('data',data)   
     return `
                 <div id="${data.id}" class="row">
-                    <div class="column1">${data.task}</div>
-                    <div class="column2"><button class="status_button ${data.status}">${data.status}</button></div>
-                    <div class="column3"><i class="fa-solid fa-trash-can" onclick=delete_row('${data.id}')></i></div>
+                    <div class="title_column">${data.task}</div>
+                    <div class="status_column"><button class="status_button ${data.status}">${data.status}</button></div>
+                    <div class="delete_column"><i class="fa-solid fa-trash-can" data-task-id="${data.id}"></i></div>
+                    
                 </div>
             `   
 }
@@ -47,6 +60,7 @@ function toggle(event){
     }else{
         console.log("Task not found for ID",taskId);
     }
+    saveTaskToLocalStorage()
     sortTasks();
 }
 //Toggle function to toggle between completed and pending (end)
@@ -76,16 +90,36 @@ function sortTasks(){
 }
 // Sort Function (end)
 
+//function to store the tasks value to localStorage
+function saveTaskToLocalStorage(){
+    localStorage.setItem('tasks',JSON.stringify(tasks))
+
+}
+
+
 //function to delete the rows from the todo-list
 function delete_row(id){
+    console.log('delete',id)
     tasks = tasks.filter(object => {
         return object.id != id;
     });
+    console.log(tasks)
     const rowToRemove = document.getElementById(id);
     if (rowToRemove && confirm("Are you sure ?")) {
         rowToRemove.parentElement.removeChild(rowToRemove);
     }
+    saveTaskToLocalStorage()
 }
+
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('fa-trash-can')) {
+        const taskId = event.target.getAttribute('data-task-id');
+        if (taskId) {
+            delete_row(taskId);
+        }
+    }
+});
+
 
 //initial data load
 sortTasks();
