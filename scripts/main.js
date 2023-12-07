@@ -1,5 +1,5 @@
-//continious data storage to localstorage
-//to check if localstorage is already set with key tasks
+//continues data storage to localStorage
+//to check if localStorage is already set with key tasks
 let tasks=localStorage.getItem('tasks')
 
 if(!tasks){
@@ -23,7 +23,7 @@ addBtn.addEventListener('click',()=>{
     tasks.push({
         id: tasks.length+1,
         task: inputValue,
-        status: 'Pending'
+        status: 'Pending',
     });
 
     saveTaskToLocalStorage()
@@ -55,7 +55,6 @@ function toggle(event){
             task.status = 'Pending';
         }else{
             task.status = 'Completed';
-
         }
     }else{
         console.log("Task not found for ID",taskId);
@@ -93,7 +92,6 @@ function sortTasks(){
 //function to store the tasks value to localStorage
 function saveTaskToLocalStorage(){
     localStorage.setItem('tasks',JSON.stringify(tasks))
-
 }
 
 
