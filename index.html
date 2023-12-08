@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>TODO List</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <main class="container">
+        <div class="purple" >
+            <h1>TODO List</h1>
+        </div>
+            <!-- section-1: first block of the to-do list start -->
+                <section class="section-1">
+                    <input id="input" type="text" placeholder="What would you like to do?"><br>
+                    <button id="addBtn">Add</button>
+                </section>
+                <!-- section-1 end -->
+
+                <!-- section-2: second block of the to-do list start -->
+                <section class="section-2">
+
+                    <h1>Todo List</h1>
+                    
+                    <div id="tasks-container" class="container">
+                        <div class="row_heading">
+                            <div class="column_list">List</div>
+                            <div class="column_status">Status</div>
+                            <div class="column_close">Close</div>
+                        </div>
+                    <!-- Add more tasks start -->
+                        <div class="all_task" id="all_tasks">
+                            <!-- structure of each task start
+                                <div id="1" class="row">
+                                    <div class="column1">swimming</div>
+                                    <div class="column2"><button class="status_button completed">completed</button></div>
+                                    <div class="column3"><i class="fa-solid fa-trash-can"></i></div>
+                                </div> 
+                            structure end-->
+                        </div>
+                    <!-- Add more tasks end -->
+                        
+
+                </section>
+                <!-- section-2 end -->
+    </main>
+<script type="module" src="scripts/main.js"></script>
+</body>
+  
+</html>
+
