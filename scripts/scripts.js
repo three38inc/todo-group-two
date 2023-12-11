@@ -7,6 +7,11 @@ if(!tasks){
     localStorage.setItem('tasks',JSON.stringify(tasks))
 } else {
     tasks=JSON.parse(tasks)
+    tasks = tasks.map(taskObject => {
+        return new Task(taskObject);
+    })
+    console.log(tasks);
+
 }
 
 const input = document.getElementById('input');
@@ -14,17 +19,13 @@ const addBtn = document.getElementById('addBtn');
 
 //Add function: To add value from the input field (start) 
 addBtn.addEventListener('click',()=>{
-    console.log('tasks',tasks)
     let inputValue = input.value;
     if(!inputValue){
         alert("No Task entered to add!");
         return;
     }
-    tasks.push({
-        id: tasks.length+1,
-        task: inputValue,
-        status: 'Pending',
-    });
+    const task = new Task({task : inputValue});
+    tasks.push(task);
 
     saveTaskToLocalStorage()
     input.value='';
@@ -34,7 +35,6 @@ addBtn.addEventListener('click',()=>{
 
 //Display function: To display the rendered task in the Todo list (start)
 function taskHtml(data){ 
-    console.log('data',data)   
     return `
                 <div id="${data.id}" class="row">
                     <div class="title_column">${data.task}</div>
@@ -51,11 +51,7 @@ function toggle(event){
     const taskId = event.target.parentNode.parentNode.id;
     const task = tasks.find((element) => element.id == taskId);
     if(task){
-        if(task.status === 'Completed'){
-            task.status = 'Pending';
-        }else{
-            task.status = 'Completed';
-        }
+        task.toggleTaskStatus();
     }else{
         console.log("Task not found for ID",taskId);
     }
@@ -84,7 +80,7 @@ function sortTasks(){
 
     //Adding event listeners for each status button (start)
     const statusButtons = document.querySelectorAll('.status_button');
-    statusButtons.forEach((button) => button.addEventListener('click', toggle) );
+    statusButtons.forEach((button) => button.addEventListener('click', toggle));
     //Adding event listeners for each status button (end)
 }
 // Sort Function (end)
@@ -97,16 +93,14 @@ function saveTaskToLocalStorage(){
 
 //function to delete the rows from the todo-list
 function delete_row(id){
-    console.log('delete',id)
     tasks = tasks.filter(object => {
         return object.id != id;
     });
-    console.log(tasks)
     const rowToRemove = document.getElementById(id);
     if (rowToRemove && confirm("Are you sure ?")) {
         rowToRemove.parentElement.removeChild(rowToRemove);
     }
-    saveTaskToLocalStorage()
+    saveTaskToLocalStorage();
 }
 
 document.addEventListener('click', function (event) {
